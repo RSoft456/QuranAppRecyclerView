@@ -8,7 +8,6 @@
     tools:openDrawer="start"
     tools:context=".MainActivity">
 
-
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
@@ -21,6 +20,11 @@
             android:gravity="center"
             app:title="Al-Quran"
             app:titleTextColor="@color/cardview_light_background" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textviewdata"
+            android:text="abc"/>
 
     </RelativeLayout>
 

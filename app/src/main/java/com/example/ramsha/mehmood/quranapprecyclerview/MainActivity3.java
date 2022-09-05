@@ -9,6 +9,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -16,12 +17,15 @@ import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.List;
+
 public class MainActivity3 extends AppCompatActivity {
 
     NavigationView navigationView;
     DrawerLayout drawerLayout;
     Toolbar toolbar;
     ActionBarDrawerToggle toggle;
+    TextView data;
 
     @Override
     public void onBackPressed() {
@@ -39,6 +43,12 @@ public class MainActivity3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+        data=findViewById(R.id.textviewdata);
+        DBHelper db = new DBHelper(this);
+        List<ModelClass> data2 = db.getData();
+        for(int i=0 ;i<data2.size();i++ ){
+            Log.d("data","this is data "+ data2.get(i).SuraId);
+        }
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
