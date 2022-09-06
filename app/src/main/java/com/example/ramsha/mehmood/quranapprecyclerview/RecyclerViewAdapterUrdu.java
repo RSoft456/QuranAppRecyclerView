@@ -13,14 +13,21 @@ import java.util.ArrayList;
 
 public class RecyclerViewAdapterUrdu extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     ArrayList<ListModel> UrduSurahNames = new ArrayList<>();
+    String req;
 
+    RecyclerViewAdapterUrdu(String req) {
+        this.req = req;
+    }
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.surahnameview, parent, false);
         return new RecyclerViewAdapterUrdu.UrduSurahVH(view);
     }
-
+    public void setData(ArrayList<ListModel> UrduSurahNames) {
+        this.UrduSurahNames = UrduSurahNames;
+        notifyDataSetChanged();
+    }
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
 
@@ -34,6 +41,7 @@ public class RecyclerViewAdapterUrdu extends RecyclerView.Adapter<RecyclerView.V
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), ShowText.class);
                 intent.putExtra("SurahNum",item.SurahNum);
+                intent.putExtra("Required",req);
                 view.getContext().startActivity(intent);
             }
         });

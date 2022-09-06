@@ -16,7 +16,11 @@ import java.util.ArrayList;
 
 public class RecyclerViewAdapterEnglish extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     ArrayList<ListModel> EnglishSurahNames = new ArrayList<>();
+    String req;
 
+    RecyclerViewAdapterEnglish(String req) {
+        this.req = req;
+    }
 
     @NonNull
     @Override
@@ -35,7 +39,8 @@ public class RecyclerViewAdapterEnglish extends RecyclerView.Adapter<RecyclerVie
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), ShowText.class);
-                intent.putExtra("SurahNum",item.SurahNum);
+                intent.putExtra("SurahNum", item.SurahNum);
+                intent.putExtra("Required",req);
                 view.getContext().startActivity(intent);
             }
         });
