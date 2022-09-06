@@ -14,7 +14,14 @@
         android:theme="@style/Theme.QuranAppRecyclerView"
         tools:targetApi="31">
         <activity
-            android:name=".BookActivity"/>
+            android:name=".ShowText"
+            android:exported="false" />
+        <activity
+            android:name=".Urdu"
+            android:exported="false" />
+        <activity
+            android:name=".English"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />

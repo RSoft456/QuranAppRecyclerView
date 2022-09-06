@@ -21,10 +21,13 @@
             app:title="Al-Quran"
             app:titleTextColor="@color/cardview_light_background" />
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
             android:id="@+id/textviewdata"
-            android:text="abc"/>
+            android:textSize="25sp"
+            android:text="Welcome To Al-Quran"
+            />
 
     </RelativeLayout>
 

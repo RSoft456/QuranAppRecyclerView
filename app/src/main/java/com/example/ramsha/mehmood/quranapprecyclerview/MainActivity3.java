@@ -26,6 +26,7 @@ public class MainActivity3 extends AppCompatActivity {
     Toolbar toolbar;
     ActionBarDrawerToggle toggle;
     TextView data;
+    Intent intent;
 
     @Override
     public void onBackPressed() {
@@ -65,8 +66,34 @@ public class MainActivity3 extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
-                    case R.id.nav_chrome_reader:
-                        Toast.makeText(getApplicationContext(), "Chrome Reader is clicked", Toast.LENGTH_LONG).show();
+                    case R.id.ReadQuran:
+                        intent = new Intent(MainActivity3.this, Urdu.class);
+                        intent.putExtra("required","ReadQuran");
+                        startActivity(intent);
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case R.id.UrduFMJ:
+                        intent = new Intent(MainActivity3.this, Urdu.class);
+                        intent.putExtra("required","UrduFMJ");
+                        startActivity(intent);
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case R.id.UrduMUH:
+                        intent = new Intent(MainActivity3.this, Urdu.class);
+                        intent.putExtra("required","UrduMUH");
+                        startActivity(intent);
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case R.id.EnglishDMK:
+                        intent = new Intent(MainActivity3.this, English.class);
+                        intent.putExtra("required","EnglishDMK");
+                        startActivity(intent);
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case R.id.EnglishMTU:
+                        intent = new Intent(MainActivity3.this, English.class);
+                        intent.putExtra("required","EnglishMTU");
+                        startActivity(intent);
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
                 }

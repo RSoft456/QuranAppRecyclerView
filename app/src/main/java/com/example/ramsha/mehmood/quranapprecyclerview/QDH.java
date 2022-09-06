@@ -1,7 +1,7 @@
 package com.example.ramsha.mehmood.quranapprecyclerview;
 
 public class QDH {
-    
+
     public String[] englishSurahNames = {"Al-Fatihah",
             "Al-Baqara ",
             "Al-i'Imran ",
@@ -234,6 +234,21 @@ public class QDH {
             " النَّاس"
     };
 
+    public String[] getEnglishSurahNames() {
+        return englishSurahNames;
+    }
+
+    public void setEnglishSurahNames(String[] englishSurahNames) {
+        this.englishSurahNames = englishSurahNames;
+    }
+
+    public String[] getUrduSurahNames() {
+        return urduSurahNames;
+    }
+
+    public void setUrduSurahNames(String[] urduSurahNames) {
+        this.urduSurahNames = urduSurahNames;
+    }
 }
 
 

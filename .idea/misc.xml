@@ -13,10 +13,14 @@
         <entry key="..\:/AndroidStudioProjects/QuranAppRecyclerView/app/src/main/res/drawable/read_more.xml" value="0.154" />
         <entry key="..\:/AndroidStudioProjects/QuranAppRecyclerView/app/src/main/res/drawable/textsms.xml" value="0.154" />
         <entry key="..\:/AndroidStudioProjects/QuranAppRecyclerView/app/src/main/res/layout/activity_book.xml" value="0.17552083333333332" />
+        <entry key="..\:/AndroidStudioProjects/QuranAppRecyclerView/app/src/main/res/layout/activity_english.xml" value="0.1" />
         <entry key="..\:/AndroidStudioProjects/QuranAppRecyclerView/app/src/main/res/layout/activity_main.xml" value="0.16145833333333334" />
         <entry key="..\:/AndroidStudioProjects/QuranAppRecyclerView/app/src/main/res/layout/activity_main2.xml" value="0.17552083333333332" />
         <entry key="..\:/AndroidStudioProjects/QuranAppRecyclerView/app/src/main/res/layout/activity_main3.xml" value="0.16145833333333334" />
+        <entry key="..\:/AndroidStudioProjects/QuranAppRecyclerView/app/src/main/res/layout/activity_show_text.xml" value="0.22826086956521738" />
+        <entry key="..\:/AndroidStudioProjects/QuranAppRecyclerView/app/src/main/res/layout/activity_urdu.xml" value="0.1" />
         <entry key="..\:/AndroidStudioProjects/QuranAppRecyclerView/app/src/main/res/layout/header.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/QuranAppRecyclerView/app/src/main/res/layout/surahnameview.xml" value="0.4" />
         <entry key="..\:/AndroidStudioProjects/QuranAppRecyclerView/app/src/main/res/menu/main_menu.xml" value="0.17552083333333332" />
       </map>
     </option>

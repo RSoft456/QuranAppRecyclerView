@@ -53,7 +53,6 @@ public class DBHelper extends SQLiteAssetHelper {
                 Log.d("data","In cursor2");
             } while (cursorCourses.moveToNext());
         }
-
         cursorCourses.close();
         return data;
     }

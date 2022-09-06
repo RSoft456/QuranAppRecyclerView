@@ -3,15 +3,12 @@ package com.example.ramsha.mehmood.quranapprecyclerview;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.widget.Toast;
 
-public class BookActivity extends AppCompatActivity {
+public class ShowText extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_book);
-        Toast.makeText(getApplicationContext(),"Retur is Clicked",Toast.LENGTH_LONG).show();
-
+        setContentView(R.layout.activity_show_text);
     }
 }

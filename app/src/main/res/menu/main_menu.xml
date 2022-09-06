@@ -7,7 +7,7 @@
         <menu>
             <group android:checkableBehavior="single">
                 <item
-                    android:id="@+id/nav_chrome_reader"
+                    android:id="@+id/ReadQuran"
                     android:icon="@drawable/chrome_reader"
                     android:title="Arabic" />
             </group>
@@ -18,11 +18,11 @@
         <menu>
             <group android:checkableBehavior="single">
                 <item
-                    android:id="@+id/Nav_add_comment"
+                    android:id="@+id/UrduFMJ"
                     android:icon="@drawable/chrome_reader"
                     android:title="By Fateh_Muhammad_Jalandhri" />
                 <item
-                    android:id="@+id/nav_insert_comment"
+                    android:id="@+id/UrduMUH"
                     android:icon="@drawable/chrome_reader"
                     android:title="By Mehmood_ul_Hassan" />
             </group>
@@ -33,11 +33,11 @@
         <menu>
             <group android:checkableBehavior="single">
                 <item
-                    android:id="@+id/Nav_add_comment2"
+                    android:id="@+id/EnglishDMK"
                     android:icon="@drawable/chrome_reader"
                     android:title="By Dr_Mohsin_Khan" />
                 <item
-                    android:id="@+id/nav_insert_comment2"
+                    android:id="@+id/EnglishMTU"
                     android:icon="@drawable/chrome_reader"
                     android:title="By Mufti_Taqi_Usmani" />
             </group>
