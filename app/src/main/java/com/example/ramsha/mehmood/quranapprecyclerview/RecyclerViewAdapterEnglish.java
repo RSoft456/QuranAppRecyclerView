@@ -35,6 +35,7 @@ public class RecyclerViewAdapterEnglish extends RecyclerView.Adapter<RecyclerVie
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), ShowText.class);
+                intent.putExtra("SurahNum",item.SurahNum);
                 view.getContext().startActivity(intent);
             }
         });

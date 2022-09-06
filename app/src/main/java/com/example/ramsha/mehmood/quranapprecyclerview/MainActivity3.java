@@ -45,11 +45,7 @@ public class MainActivity3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         data=findViewById(R.id.textviewdata);
-        DBHelper db = new DBHelper(this);
-        List<ModelClass> data2 = db.getData();
-        for(int i=0 ;i<data2.size();i++ ){
-            Log.d("data","this is data "+ data2.get(i).SuraId);
-        }
+
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -60,7 +56,7 @@ public class MainActivity3 extends AppCompatActivity {
         toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open, R.string.close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
-
+        drawerLayout.openDrawer(GravityCompat.START);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
 
             @Override
@@ -68,31 +64,31 @@ public class MainActivity3 extends AppCompatActivity {
                 switch (menuItem.getItemId()) {
                     case R.id.ReadQuran:
                         intent = new Intent(MainActivity3.this, Urdu.class);
-                        intent.putExtra("required","ReadQuran");
+                        intent.putExtra("required","Arabic_Text");
                         startActivity(intent);
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
                     case R.id.UrduFMJ:
                         intent = new Intent(MainActivity3.this, Urdu.class);
-                        intent.putExtra("required","UrduFMJ");
+                        intent.putExtra("required","Fateh_Muhammad_Jalandhri");
                         startActivity(intent);
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
                     case R.id.UrduMUH:
                         intent = new Intent(MainActivity3.this, Urdu.class);
-                        intent.putExtra("required","UrduMUH");
+                        intent.putExtra("required","Mehmood_ul_Hassan");
                         startActivity(intent);
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
                     case R.id.EnglishDMK:
                         intent = new Intent(MainActivity3.this, English.class);
-                        intent.putExtra("required","EnglishDMK");
+                        intent.putExtra("required","Dr_Mohsin_Khan");
                         startActivity(intent);
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
                     case R.id.EnglishMTU:
                         intent = new Intent(MainActivity3.this, English.class);
-                        intent.putExtra("required","EnglishMTU");
+                        intent.putExtra("required","Mufti_Taqi_Usmani");
                         startActivity(intent);
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;

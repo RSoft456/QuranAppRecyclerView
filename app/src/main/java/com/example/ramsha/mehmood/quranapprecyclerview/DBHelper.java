@@ -24,11 +24,12 @@ public class DBHelper extends SQLiteAssetHelper {
         super(context,DBNAME,null,DBVERSION);
     }
     int id = 1;
-    public ArrayList<ModelClass> getData() {
-        SQLiteDatabase db = getReadableDatabase();
+    public ArrayList<ModelClass> getData(String ColName,int Suranum) {
+        SQLiteDatabase db = this.getReadableDatabase();
       //  SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
 
-        Cursor cursorCourses = db.rawQuery("SELECT * FROM " + TNAME + " WHERE SuraID = 114 " , null);
+        Cursor cursorCourses = db.rawQuery("SELECT "+"'"+ ColName+"'"+ " FROM " + TNAME +" WHERE SuraID = " + "'"+Suranum +"'" , null);
+        Log.d("data","In cursor1"+cursorCourses);
 
         ArrayList<ModelClass> data = new ArrayList<>();
         Log.d("data","In cursor0");

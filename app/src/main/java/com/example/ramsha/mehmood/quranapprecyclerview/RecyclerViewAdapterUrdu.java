@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class RecyclerViewAdapterUrdu extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-    ArrayList<QDH> UrduSurahNames = new ArrayList<>();
+    ArrayList<ListModel> UrduSurahNames = new ArrayList<>();
 
     @NonNull
     @Override
@@ -23,14 +23,17 @@ public class RecyclerViewAdapterUrdu extends RecyclerView.Adapter<RecyclerView.V
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        QDH item = UrduSurahNames.get(position);
+
+        ListModel item = UrduSurahNames.get(position);
         RecyclerViewAdapterUrdu.UrduSurahVH ViewHolder = (RecyclerViewAdapterUrdu.UrduSurahVH) holder;
-        ViewHolder.Text.setText(item.getUrduSurahNames()[position]);
+        ViewHolder.Text.setText(item.getSurahName());
+
         ViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), ShowText.class);
+                intent.putExtra("SurahNum",item.SurahNum);
                 view.getContext().startActivity(intent);
             }
         });

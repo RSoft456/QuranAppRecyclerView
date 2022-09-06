@@ -34,7 +34,7 @@ public class English extends AppCompatActivity {
         String[] data2 = data.getEnglishSurahNames();
         for (int i = 0; i < data2.length; i++) {
             int j = i + 1;
-            list.add(new ListModel(data2[i]), j);
+            list.add(new ListModel(data2[i], j));
         }
         RVadapter.setData(list);
 
