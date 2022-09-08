@@ -6,9 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".ShowText">
 <TextView
+    android:layout_margin="8dp"
+    android:scrollbars="vertical"
     android:id="@+id/SuraText"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="NewActivity"
+    android:textSize="18sp"
     android:layout_centerInParent="true"/>
 </RelativeLayout>

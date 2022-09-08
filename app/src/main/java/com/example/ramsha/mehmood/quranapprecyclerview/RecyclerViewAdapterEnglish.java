@@ -7,65 +7,35 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class RecyclerViewAdapterEnglish extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-    ArrayList<ListModel> EnglishSurahNames = new ArrayList<>();
-    String req;
 
-    RecyclerViewAdapterEnglish(String req) {
-        this.req = req;
-    }
 
-    @NonNull
-    @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.surahnameview, parent, false);
-        return new RecyclerViewAdapterEnglish.EnglishSurahVH(view);
+public class RecyclerViewAdapterEnglish extends ArrayAdapter<ListModel> {
+
+
+
+    public RecyclerViewAdapterEnglish(@NonNull Context context, ArrayList<ListModel> ListViewArray) {
+        super(context, R.layout.surahnameview, ListViewArray);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        ListModel item = EnglishSurahNames.get(position);
-        RecyclerViewAdapterEnglish.EnglishSurahVH ViewHolder = (RecyclerViewAdapterEnglish.EnglishSurahVH) holder;
-        ViewHolder.Text.setText(item.getSurahName());
-        ViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), ShowText.class);
-                intent.putExtra("SurahNum", item.SurahNum);
-                intent.putExtra("Required",req);
-                view.getContext().startActivity(intent);
-            }
-        });
+        ListModel list = getItem(position);
+        convertView = LayoutInflater.from(getContext()).inflate(R.layout.surahnameview, parent, false);
+        TextView Text = convertView.findViewById(R.id.RVText);
+        Text.setText(list.getSurahName());
 
-    }
-
-    public void setData(ArrayList<ListModel> EnglishSurahNames) {
-        this.EnglishSurahNames = EnglishSurahNames;
-        notifyDataSetChanged();
-    }
-
-    @Override
-    public int getItemCount() {
-        return EnglishSurahNames.size();
-    }
-
-
-    public static class EnglishSurahVH extends RecyclerView.ViewHolder {
-        TextView Text;
-
-        public EnglishSurahVH(@NonNull View itemView) {
-            super(itemView);
-            Text = itemView.findViewById(R.id.RVText);
-
-        }
+        return convertView;
     }
 }
+
 
