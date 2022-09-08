@@ -28,16 +28,6 @@ public class MainActivity3 extends AppCompatActivity {
     TextView data;
     Intent intent;
 
-    @Override
-    public void onBackPressed() {
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-            drawerLayout.closeDrawer(GravityCompat.START);
-            Toast.makeText(getApplicationContext(), "Start", Toast.LENGTH_LONG).show();
-
-        } else {
-            Toast.makeText(getApplicationContext(), "End", Toast.LENGTH_LONG).show();
-        }
-    }
 
 
     @Override

@@ -5,13 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ShowText">
-<TextView
-    android:layout_margin="8dp"
-    android:scrollbars="vertical"
-    android:id="@+id/SuraText"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="NewActivity"
-    android:textSize="18sp"
-    android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/SuraNametxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="fgujhgj"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/SuraText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="8dp"
+        android:layout_below="@id/SuraNametxt"
+        android:scrollbars="vertical"
+        android:text="NewActivity"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
 </RelativeLayout>

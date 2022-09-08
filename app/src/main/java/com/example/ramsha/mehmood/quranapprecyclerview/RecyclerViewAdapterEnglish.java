@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -33,6 +34,7 @@ public class RecyclerViewAdapterEnglish extends ArrayAdapter<ListModel> {
         convertView = LayoutInflater.from(getContext()).inflate(R.layout.surahnameview, parent, false);
         TextView Text = convertView.findViewById(R.id.RVText);
         Text.setText(list.getSurahName());
+        Text.setTypeface(ResourcesCompat.getFont(convertView.getContext(), R.font.jameelnoorinastaleeq));
 
         return convertView;
     }

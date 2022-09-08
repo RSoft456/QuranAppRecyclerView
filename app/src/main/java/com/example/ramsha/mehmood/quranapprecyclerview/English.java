@@ -42,6 +42,7 @@ public class English extends AppCompatActivity {
                 Intent intent = new Intent(view.getContext(), ShowText.class);
                 intent.putExtra("SurahNum", item.SurahNum);
                 intent.putExtra("Required", Req);
+                intent.putExtra("SuraName",item.getSurahName());
                 startActivity(intent);
             }
         });

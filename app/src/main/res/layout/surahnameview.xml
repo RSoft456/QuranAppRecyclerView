@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="3dp"
-        app:cardBackgroundColor="#AF9C9C"
+        app:cardBackgroundColor="@color/cardview_dark_background"
         android:layout_margin="5dp">
 
         <TextView
@@ -19,6 +19,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             android:gravity="center"
+            android:textColor="@color/white"
             android:text="ajhgguj"
             android:textSize="16sp" />
     </androidx.cardview.widget.CardView>

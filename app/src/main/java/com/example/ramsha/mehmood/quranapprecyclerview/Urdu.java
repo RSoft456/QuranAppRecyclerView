@@ -17,6 +17,7 @@ public class Urdu extends AppCompatActivity {
     QDH data = new QDH();
     ArrayList<ListModel> list = new ArrayList<>();
     String Req;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
